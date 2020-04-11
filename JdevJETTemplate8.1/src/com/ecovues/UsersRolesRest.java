@@ -1,4 +1,4 @@
-package com.ecovues.imaging;
+package com.ecovues;
 
 import java.security.Principal;
 
