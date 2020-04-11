@@ -10,7 +10,7 @@
 	</session-config>
         <servlet>
              <servlet-name>LogoutSession</servlet-name>
-             <servlet-class>com.ecovues.imaging.LogoutSession</servlet-class>
+             <servlet-class>com.ecovues.LogoutSession</servlet-class>
         </servlet>
         <servlet-mapping>
              <servlet-name>LogoutSession</servlet-name>

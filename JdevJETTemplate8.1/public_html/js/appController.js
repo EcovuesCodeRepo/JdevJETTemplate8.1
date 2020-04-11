@@ -12,7 +12,7 @@ define(['knockout','default','configs', 'ojs/ojmodule-element-utils', 'ojs/ojkno
   function(ko, defaults, configs, moduleUtils, KnockoutTemplateUtils, Router, ResponsiveUtils, ResponsiveKnockoutUtils, ArrayDataProvider, OffcanvasUtils) {
      function ControllerViewModel() {
       var self = this;
-
+	  defaults.fromUser('Admin');
       this.KnockoutTemplateUtils = KnockoutTemplateUtils;
 
       // Handle announcements sent when pages change, for Accessibility.
@@ -104,7 +104,7 @@ define(['knockout','default','configs', 'ojs/ojmodule-element-utils', 'ojs/ojkno
       // Application Name used in Branding Area
       self.appName = ko.observable("JET Template");
       // User Info used in Global Navigation area
-      self.userLogin = ko.observable('Guest');
+      self.userLogin = ko.observable(defaults.userName());
       
       self.loggerStatus = ko.observable(false);
                         self.loggerFlag = ko.observable(false);
