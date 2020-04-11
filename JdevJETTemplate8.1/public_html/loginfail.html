@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+-->
+
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+-->
+
+<html id="htmldoc" lang="en-us">
+    <head>
+        <title>OneVue Dashboard</title>
+        <link rel="icon" sizes="212x212" href="img/FIF_launcher2_icon.png">
+        <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, user-scalable=no"/>
+
+        <!-- for Safari on iOS -->
+        <meta name="apple-mobile-web-app-title" content="FixItFast">
+        <link rel="apple-touch-icon" sizes="212x212" href="img/FIF_launcher2_icon_rect.png">
+        <link rel="apple-touch-startup-image" href="img/screen.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!-- for Chrome on Android -->
+        <link rel="manifest" href="manifest.json">
+
+        <!-- injector:theme -->
+        <link rel="stylesheet" href="css/signincss.css"/>
+        <!-- This is where you would add any app specific styling -->
+        <!-- endinjector -->
+        <script src="js/libs/require/require.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    </head>
+    <body>
+        <!--
+     Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+     The Universal Permissive License (UPL), Version 1.0
+        -->
+        <!--
+         Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+         The Universal Permissive License (UPL), Version 1.0
+        -->
+
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                
+                <!-- Tabs Titles -->
+                <h2> Sign in </h2>
+                <!-- Icon -->
+                <div class="fadeIn first">
+                    <h3 id="Icon">oneVue Invoice</h3>
+                </div><br>
+                <!-- Login Form -->
+                <form method="post" action="j_security_check">
+                    <input type="text" id="login" class="fadeIn second user" name="j_username" placeholder="Username" autocomplete="off">
+                    <input type="password" id="password" class="fadeIn third password" name="j_password" placeholder="Password" autocomplete="off">
+                    <div><input type="checkbox" onclick="typeChangePass()">&nbsp;Show Password</div><br>
+                     <div class="isa_error">
+                    <i class="fa fa-times-circle"></i>
+                    Invalid Login. Please enter valid credentials
+                </div>
+                    <input type="submit" class="fadeIn fourth" value="Submit">
+                </form>
+
+                <!-- Remind Passowrd 
+                 <div id="formFooter">
+                     <a class="underlineHover" href="#">Forgot Password?</a>
+                 </div> -->
+
+            </div>
+        </div>
+
+
+        <!-- Google Maps API script -->
+        <!-- <script defer async type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script> -->
+
+        <script type="text/javascript">
+            function typeChangePass() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+            /* START: service worker code */
+            /*
+             if ('serviceWorker' in navigator) {
+             navigator.serviceWorker.register('sw.js').then(function(registration) {
+             // Registration was successful
+             console.log('ServiceWorker registration successful with scope: ', registration.scope);
+             }).catch(function(err) {
+             // registration failed :(
+             console.log('ServiceWorker registration failed: ', err);
+             });
+             }
+             */
+            /* END: service worker code */
+
+        </script>
+
+    </body>
+</html>
